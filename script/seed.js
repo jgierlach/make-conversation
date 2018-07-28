@@ -15,10 +15,28 @@ async function seed() {
   const religion = await Promise.all([
     Religion.create({question: 'What is the oldest religion?'}),
     Religion.create({question: 'What religion has the most followers?'}),
-    Religion.create({question: 'How can '}),
-    Religion.create({question: 'What is the oldest religion?'}),
-    Religion.create({question: 'What is the oldest religion?'}),
-    Religion.create({question: 'What is the oldest religion?'})    
+    Religion.create({question: 'What is considered to be the holiest city'}),
+    Religion.create({question: 'How old are rocks?'}),
+    Religion.create({question: 'Where is the oldest tree'}),
+    Religion.create({question: 'How many ways can you find a panda?'})    
+  ])
+
+  const politics = await Promise.all([
+    Politics.create({question: 'What is the oldest Politics?'}),
+    Politics.create({question: 'What Politics has the most followers?'}),
+    Politics.create({question: 'What are you capable of'}),
+    Politics.create({question: 'Is marijuann ledgible for the masses'}),
+    Politics.create({question: 'When does a peacock ussually take paid time off'}),
+    Politics.create({question: 'How did alabama meet florida?'})    
+  ])
+
+  const travel = await Promise.all([
+    Travel.create({question: 'What was your best travel experience?'}),
+    Travel.create({question: 'What kind of taco has the best mile time?'}),
+    Travel.create({question: 'How does a kangaroo increase its credit score'}),
+    Travel.create({question: 'How old is rocknroll?'}),
+    Travel.create({question: 'Do you believe in punk rock?'}),
+    Travel.create({question: 'What is the best way to eat the alphabet?'})    
   ])
 
   console.log(`seeded ${users.length} users`)
