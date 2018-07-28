@@ -19,7 +19,7 @@ class Routes extends Component {
         <Route exact path="/travel" component={Travel} />
         <Route exact path="/religion" component={Religion} />
         <Route exact path="/politics" component={Politics}/>
-        <Route path="/navbar" component={Navbar} />
+        <Route path="/" component={Navbar} />
       </Switch>
     )
   }

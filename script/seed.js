@@ -12,6 +12,15 @@ async function seed() {
     User.create({email: 'murphy@email.com', password: '123'})
   ])
 
+  const religion = await Promise.all([
+    Religion.create({question: 'What is the oldest religion?'}),
+    Religion.create({question: 'What religion has the most followers?'}),
+    Religion.create({question: 'How can '}),
+    Religion.create({question: 'What is the oldest religion?'}),
+    Religion.create({question: 'What is the oldest religion?'}),
+    Religion.create({question: 'What is the oldest religion?'})    
+  ])
+
   console.log(`seeded ${users.length} users`)
   console.log(`seeded successfully`)
 }
