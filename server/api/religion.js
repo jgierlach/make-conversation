@@ -10,3 +10,15 @@ router.get('/', async (req, res, next) => {
     next(err)
   }
 })
+
+// get a random question about politics from the database
+// route address /api/politics/:randomId
+router.get('/:randomId', async (req, res, next) => {
+  try {
+    const randomId = Math.floor(Math.random() * 6 + 1)
+    const randomQuestion = await Religion.findById(randomId)
+    res.json(randomQuestion)
+  } catch (err) {
+    next(err)
+  }
+})
