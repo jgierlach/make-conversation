@@ -11,4 +11,14 @@ router.get('/', async (req, res, next) => {
   }
 })
 
-
+// get a random question about politics from the database
+// route address /api/politics/:randomId
+router.get('/:randomId', async (req, res, next) => {
+  try {
+    const randomId = Math.floor(Math.random() * 6 + 1)
+    const randomQuestion = await Travel.findById(randomId)
+    res.json(randomQuestion)
+  } catch (err) {
+    next(err)
+  }
+})
