@@ -6,3 +6,6 @@
 export {default as Navbar} from './navbar'
 export {default as UserHome} from './user-home'
 export {Login, Signup} from './auth-form'
+export {Travel} from './Travel'
+export {Politics} from './Politics'
+export {Religion} from './Religion'
